@@ -4,8 +4,8 @@ export const antdCustomTheme = (theme: "blue" | "dark" | "light") => {
 
     const lightTheme :ThemeConfig = {
         token: {
-            colorPrimary: "#2F54EB",
-            colorPrimaryBg: "#D6E4FF",
+            colorPrimary: "#015965",
+            colorPrimaryBg: "#015965",
             colorText: "rgba(0, 0, 0, 0.85)",
             colorTextBase: "rgba(0, 0, 0, 1)",
             colorBgBase: "#fff",
@@ -18,8 +18,8 @@ export const antdCustomTheme = (theme: "blue" | "dark" | "light") => {
 
     const blueTheme :ThemeConfig = {
         token: {
-            colorPrimary: "#2F54EB",
-            colorPrimaryBg: "#D6E4FF",
+            colorPrimary: "#015965",
+            colorPrimaryBg: "#015965",
             colorText: "#fff",
             colorTextBase: "#fff",
             colorBgBase: "#000",
