@@ -1,0 +1,176 @@
+/** @format */
+
+@import "../../../assets/styles/theme";
+@import "../../../assets/styles/sidebar";
+
+:root{
+  --padding: auto;
+}
+
+[data-sidebar="none"] {
+  --padding: 3px 12px 0;
+}
+[data-sidebar="large"] {
+  --padding: auto;
+}
+
+$padding: var(--padding);
+
+.container-sidebar-ant {
+  width: $sidebar !important;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $bg;
+  z-index: 22;
+  transition: var(--animation-duration) linear;
+  padding: 1rem 0;
+  padding-top: 0;
+  border-right: 1px solid #F0F0F0;
+  background: #015965;
+
+  [data-sidebar="none"] {
+    padding: 1rem 0;
+  }
+}
+
+.sidebar-wrapper{
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    height: var(--header);
+    padding-left: 24px;
+    transition: 0.2s;
+    img {
+      width: auto;
+      height: 28px;
+    }
+    h1 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+      margin-left: 12px;
+    }
+  }
+
+  .none {
+    padding-left: 8px;
+    h1 {
+      animation: none_h1 var(--animation-duration) linear;
+      animation-fill-mode: forwards;
+    }
+    img {
+      animation: none_img var(--animation-duration) linear;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes none_h1 {
+    to {
+      font-size: 0;
+      margin-left: 0;
+    }
+  }
+  @keyframes none_img {
+    to {
+      height: 18px;
+      width: auto;
+      margin-left: 8px;
+    }
+  }
+
+  .large {
+    h1 {
+      animation: large_h1 var(--animation-duration) linear;
+      animation-fill-mode: forwards;
+    }
+    img {
+      animation: large_img var(--animation-duration) linear;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes large_h1 {
+    from {
+      font-size: 0;
+      margin-left: 0;
+    }to {
+      font-size: 18px;
+      margin-left: 12px;
+    }
+  }
+  @keyframes large_img {
+    from {
+      height: 18px;
+      margin-left: 8px;
+    }to {
+      height: 28px;
+      margin-left: 0;
+    }
+  }
+
+  .none_img{
+    img{
+      width: 0;
+    }
+
+    h5, h6 {
+      font-size: 0;
+      // animation: none_h1 var(--animation-duration) linear;
+      // animation-fill-mode: forwards;
+    }
+
+    svg{
+      width: 0;
+    }
+  }
+
+  .container-menu {
+    height: calc(100vh - var(--header));
+    overflow-y: auto;
+    padding-left: 0.5rem;
+
+    .ant-menu,
+    .ant-menu-sub,
+    .ant-menu-inline,
+    .ant-menu-submenu-placement-rightTop {
+      background-color: transparent !important;
+      border-inline-end: none !important;
+    }
+
+    .item-ant,
+    .ant-menu-item,
+    .ant-menu-submenu-title {
+      margin: 0;
+      margin-bottom: 0.5rem;
+      border-radius: 0.5rem;
+      text-align: start;
+      list-style: none;
+      text-decoration: none;
+      height: 38px;
+      transition: var(--animation-duration);
+      color: #fff;
+      padding: $padding;
+      &:hover{
+        background: #014751;
+        color: #fff !important;
+      }
+    }
+    .ant-menu-item-selected{
+      background: #014751;
+      color: #fff;
+    }
+    .ant-menu-item-active{
+      &:active{
+        background: #015461 !important;
+      }
+    }
+  }
+}

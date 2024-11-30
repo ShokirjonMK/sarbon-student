@@ -1,0 +1,21 @@
+
+.time-table-wrapper{
+
+  .ant-table-thead .ant-table-cell{
+    background-color: #fafafa !important;
+  }
+
+  .ant-table-cell-row-hover:not(.active){
+    background-color: #fafafa !important;
+  }
+  .active{
+    background-color: #FFFBE6 !important;
+  }
+}
+
+.student-time-table{
+
+  .time-table-box{
+    width: 100px !important;
+  }
+}
