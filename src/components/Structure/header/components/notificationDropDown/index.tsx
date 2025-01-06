@@ -12,7 +12,8 @@ const NotificationDropDown: FC = (): JSX.Element => {
         {
           label: <div className="max-w-[500px]">
                     {
-                        auth?.user?.edu_form?.id === 1 ? 
+                      // auth?.user?.edu_form?.id === 1 ?
+                        1 !== 1 ? 
                             <div>
                                 Hurmatli kunduzgi ta'lim shaklida tahsil oluvchi talabalar, shu kunga qadar o‘zlashtirilmagan fanlarni 2023/2024-o‘quv yilining "Yozgi semestr"ida ("YS") qayta o'qish uchun arizalar qabul qilish 2024-yilning 03-iyun sanasidan boshlanishini e'lon qilamiz! <br /> <br />
 
@@ -68,7 +69,8 @@ const NotificationDropDown: FC = (): JSX.Element => {
   return (
     <Dropdown menu={{ items }} trigger={['click']} placement="bottomRight">
         <Button type="text" className="px-[8px]">
-          <Badge count={auth?.user?.edu_form?.id === 1 ? 1 : 0} size="small">
+        {/* auth?.user?.edu_form?.id === 1 ? */}
+          <Badge count={1 !== 1 ? 1 : 0} size="small">
             <AlertRegular className="text-[20px]" />
           </Badge>
         </Button>
