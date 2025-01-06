@@ -123,7 +123,7 @@ export const prived_routes: Array<TypeRoutes> = [
     path: "/time-table",
     component: TimeTable,
     config: {
-      permission: "time-table_index",
+      permission: "timetable_index",
       icon: CalendarRtl20Regular,
       structure: "layout",
       isMenu: true,
