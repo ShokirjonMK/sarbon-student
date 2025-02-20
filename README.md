@@ -1,2 +1,2 @@
 # sarbon-student
-# LMS
+# LMS for std
